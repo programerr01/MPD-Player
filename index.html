@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPD Player</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/4.6.0/dash.all.min.js"></script>
+    <script defer src="./index.js"></script>
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(149, 144, 144);
+        }
+        button {
+            background-color: #62529c;
+        border: none;
+        color: #fff;
+        padding: 6px 10px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+
+            }
+        button:hover{
+            background-color: #7d70ae;
+        }
+        input[type=text] {
+        width:50%;
+        padding: 5px;
+        border: 2px solid #cccccc;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+      }
+      input[type=text]:focus {
+        border-color: #333333;
+      }
+      input[type=submit] {
+        padding: 5px 15px;
+        background: #99e0b2;
+        border: 0 none;
+        cursor: pointer;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+      }
+    </style>
+</head>
+<body>
+    <h2>Enter Url for Mdisk</h2>
+   <small> <b>Enter Url of mdisk or direct url for mpd file</b></small>
+    <br/>
+    <input type="text" id="url" placeholder="https://mdisk.me/convertor/30xa7/cdgid1">
+    <button onclick="handleClick()">Play</button>
+    <br/><br/>
+    <div>
+        <video style="display:none" id="videoPlayer" controls></video>
+    </div>
+</body>
+</html>
